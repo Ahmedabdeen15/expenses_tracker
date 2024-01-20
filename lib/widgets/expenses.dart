@@ -1,3 +1,4 @@
+import 'package:expenses_tracker/widgets/chart/chart.dart';
 import 'package:expenses_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expenses_tracker/models/expense.dart';
 import 'package:expenses_tracker/widgets/new_expanses.dart';
@@ -72,7 +73,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('the chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
               child: _registeredExpenses.isEmpty
                   ? const Center(child: Text('No Expense found'))
